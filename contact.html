@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - File's Studios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>File's Studios</h1>
+    <p>Web Designer • UI/UX • Frontend Developer</p>
+    <nav>
+      <a href="index.html#servicii">Servicii</a>
+      <a href="index.html#portofoliu">Proiecte</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-form">
+    <h2 class="centered-title">Trimite un mesaj</h2>
+    <form action="https://formspree.io/f/mqaqngjl" method="POST" class="form">
+      <label for="nume">Nume:</label>
+      <input type="text" id="nume" name="nume" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mesaj">Mesaj:</label>
+      <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+
+      <button type="submit" class="cta">Trimite</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 File's Studios. Toate drepturile rezervate.
+  </footer>
+</body>
+</html>

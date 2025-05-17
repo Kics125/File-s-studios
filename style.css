@@ -1,0 +1,244 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+nav a {
+  color: #00d9ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: #ffffff10;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  color: #00d9ff;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+button.cta {
+  margin-top: 2rem;
+  background: #00d9ff;
+  color: #000;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button.cta:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+.centered-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.link {
+  color: #00d9ff;
+  text-decoration: none;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Light mode */
+body.light-mode {
+  background: #f0f0f0;
+  color: #111;
+}
+body.light-mode .card {
+  background: #fff;
+  color: #000;
+}
+body.light-mode nav a,
+body.light-mode .link {
+  color: #0077cc;
+}
+body.light-mode .card h3 {
+  color: #0077cc;
+}
+body.light-mode button.cta {
+  background: #0077cc;
+  color: white;
+}
+body.light-mode button.cta:hover {
+  background: #005fa3;
+}
+
+/* Toggle button */
+.mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00d9ff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.mode-toggle:hover {
+  transform: scale(1.1);
+}
+/* Popup */
+.popup {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background: #00d9ff;
+  color: #000;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.contact-form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.contact-form .form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.contact-form .form input,
+.contact-form .form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form .form button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .form button:hover {
+  background-color: #444;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* spațiu între logo și text */
+}
+
+.logo {
+  width: 50px; /* ajustează după cum vrei */
+  height: auto;
+}
