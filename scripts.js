@@ -64,3 +64,19 @@ function showPopup(message) {
     setTimeout(() => document.body.removeChild(popup), 300);
   }, 2500);
 }
+const toggleBtn = document.createElement('button');
+toggleBtn.innerHTML = "🌓";
+toggleBtn.className = "mode-toggle";
+document.body.appendChild(toggleBtn);
+
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+});
+
+// Burger menu logic
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('nav');
+
+burger.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
