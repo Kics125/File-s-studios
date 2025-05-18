@@ -2,37 +2,166 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact - File's Studios</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header, footer {
+      background-color: #1f1f1f;
+      padding: 15px 20px;
+      color: #eee;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    }
+    header a, nav a {
+      color: #eee;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    header a:hover, nav a:hover {
+      color: #4A90E2;
+    }
+    header .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #4A90E2;
+      text-decoration: none;
+    }
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 15px;
+    }
+    .contact-form {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(74, 144, 226, 0.5);
+      padding: 30px 40px;
+      max-width: 480px;
+      width: 100%;
+    }
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #4A90E2;
+      font-weight: 700;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #b0b0b0;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      background-color: #292929;
+      border: 1.5px solid #444;
+      border-radius: 8px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      color: #eee;
+      resize: vertical;
+      transition: border-color 0.3s;
+      font-family: 'Poppins', sans-serif;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #4A90E2;
+      box-shadow: 0 0 8px #4A90E2;
+      background-color: #222;
+    }
+    button.cta {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #4A90E2;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 6px 12px rgba(74,144,226,0.6);
+    }
+    button.cta:hover,
+    button.cta:focus {
+      background-color: #357ABD;
+      box-shadow: 0 8px 20px rgba(53,122,189,0.8);
+      outline: none;
+    }
+    footer {
+      text-align: center;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 20px 10px;
+      user-select: none;
+    }
+    @media (max-width: 520px) {
+      .contact-form {
+        padding: 20px 25px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>File's Studios</h1>
-    <p>Web Designer • UI/UX • Frontend Developer</p>
-    <nav>
-      <a href="index.html#servicii">Servicii</a>
-      <a href="index.html#portofoliu">Proiecte</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container header-content" style="display:flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="logo" aria-label="File's Studios Home">
+        <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="vertical-align: middle;">
+          <rect x="12" y="8" width="40" height="48" rx="6" ry="6" fill="#4A90E2" />
+          <path d="M36 8v12h12" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+          <line x1="20" y1="26" x2="44" y2="26" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+          <line x1="20" y1="34" x2="44" y2="34" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+          <line x1="20" y1="42" x2="36" y2="42" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <span>File's Studios</span>
+      </a>
+      <nav>
+        <a href="index.html">Acasă</a>
+        <a href="proiecte.html">Proiecte Viitoare</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="contact-form">
-    <h2 class="centered-title">Trimite un mesaj</h2>
-    <form action="https://formspree.io/f/mqaqngjl" method="POST" class="form">
-      <label for="nume">Nume:</label>
-      <input type="text" id="nume" name="nume" required />
+  <main>
+    <section class="contact-form" role="form" aria-labelledby="contactTitle">
+      <h2 id="contactTitle">Trimite un mesaj</h2>
+      <form action="https://formspree.io/f/mqaqngjl" method="POST" class="form" novalidate>
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume" placeholder="Ex: Paul" required autocomplete="name" />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="exemplu@mail.com" required autocomplete="email" />
 
-      <label for="mesaj">Mesaj:</label>
-      <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+        <label for="mesaj">Mesaj:</label>
+        <textarea id="mesaj" name="mesaj" rows="5" placeholder="Scrie mesajul tău aici..." required></textarea>
 
-      <button type="submit" class="cta">Trimite</button>
-    </form>
-  </section>
+        <button type="submit" class="cta" aria-label="Trimite mesajul">Trimite</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 File's Studios. Toate drepturile rezervate.
